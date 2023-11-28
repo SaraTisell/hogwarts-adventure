@@ -15,7 +15,8 @@ dormitories = ["Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"]
 print(*dormitories, sep="\n")
 
 def select_dormitory():
-    
+    print("We need to know your strenghts to make sure to put you in the right dormitory.\nPlease choose one of these four skills that best describes you greates strength! ")
+    dormitories_strengths = ["Bravery", "Curiosity", "Loyalty", "Ambition"]
 
 
 
