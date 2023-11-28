@@ -23,7 +23,13 @@ def select_dormitory():
 
 # Challenge description
 
-print(f"{name} you have been placed in")
+print((f"{name} you have been placed in {dormitory}, which will suit you perfectly based on your skill {user_dormitory_strenght}!\n"
+"We have a very important mission for you, we need you to find the Philosopher's stone before it is to late!\n"
+"Find the stone while you explore the magic within Hogwarts, but be careful, challenges will come in your way.\n"
+f"Use your skill {user_dormitory_strenght} well, and we will meet again in the end."
+f"The best of luck to you {name}"))
+
+
 
 def third_floor():
 
@@ -42,6 +48,7 @@ def prof_dumbledore():
 def game_lost():
 
 def game_win():
+
 
 
 
