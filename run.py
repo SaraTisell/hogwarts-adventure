@@ -4,7 +4,7 @@ dormitories = {"Gryffindor": "Bravery", "Ravenclaw": "Curiosity", "Hufflepuff": 
 # Description for game
 print("Welcome to Hogwarts Adventure")
 print("If you are ready to play the game please enter your name")
-name = input()
+name = input().capitalize()
 print("Thank you, lets play and have fun!")
 print()
 
@@ -24,21 +24,24 @@ def select_dormitory():
     print("We need to know your strenghts to make sure to put you in the right dormitory.\nPlease choose one of these four skills that best describes you greates strength! ")
     for dormitory_strength in dormitories.values():
         print(dormitory_strength)
-    print(Please write your selected strength)
-    userDormitory = ""
-    while userDormitory not in dormitories.values:
+    #print(Please write your selected strength)
+    userDormitoryStrength = ""
+    while userDormitoryStrength not in dormitories.values():
         print("Strengths: Bravery, Curiosity, Loyalty, Ambition")
-        userDormitory = input()
+        userDormitoryStrength = input("Please write your selected strength:\n").capitalize()
+    
+    userDormitory = dormitories.get(userDormitoryStrength)
         
+select_dormitory()
 
 # Challenge description
-"""
-print((f"{name} you have been placed in {dormitory}, which will suit you perfectly based on your skill {}!\n"
+
+print((f"{name} you have been placed in {userDormitory}, which will suit you perfectly based on your skill {userDormitoryStrength}!\n"
 "We have a very important mission for you, we need you to find the Philosopher's stone before it is to late!\n"
 "Find the stone while you explore the magic within Hogwarts, but be careful, challenges will come in your way.\n"
-f"Use your skill {} well, and we will meet again in the end."
+f"Use your skill {userDormitoryStrength} well, and we will meet again in the end."
 f"The best of luck to you {name}"))
-"""
+
 """
 Function structure borrowed from https://www.makeuseof.com/python-text-adventure-game-create/
 """
