@@ -24,7 +24,12 @@ def select_dormitory():
     print("We need to know your strenghts to make sure to put you in the right dormitory.\nPlease choose one of these four skills that best describes you greates strength! ")
     for dormitory_strength in dormitories.values():
         print(dormitory_strength)
-   # dormitory = input()
+    print(Please write your selected strength)
+    userDormitory = ""
+    while userDormitory not in dormitories.values:
+        print("Strengths: Bravery, Curiosity, Loyalty, Ambition")
+        userDormitory = input()
+        
 
 # Challenge description
 """
