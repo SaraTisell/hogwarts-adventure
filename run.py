@@ -18,7 +18,8 @@ print(*dormitories, sep="\n")
 def select_dormitory():
     print("We need to know your strenghts to make sure to put you in the right dormitory.\nPlease choose one of these four skills that best describes you greates strength! ")
     dormitories_strengths = ["Bravery", "Curiosity", "Loyalty", "Ambition"]
-    user_dormitory_strenght = input()
+    print("Please selecet 1 for Bravery\n2 for Curiosity\n3 for Loyalty\n4 for Ambition")
+    user_dormitory_strenght = ""
    # dormitory = input()
 
 # Challenge description
@@ -36,8 +37,8 @@ Function structure borrowed from https://www.makeuseof.com/python-text-adventure
 def start_exploring():
     option = ["1", "2"]
     print(("It is time to begin your jorney to find the Philosopher's stone, you can either go to the Third Floor or the Dark Forest\n"
-    "Please select 1 for Third Floor\n"
-    "Please selecet 2 for Dark Forest "))
+    "Select 1 for Third Floor\n"
+    "Selecet 2 for Dark Forest "))
     userInput = ""
     while userInput not in option:
         print("Please selecet 1 or 2")
@@ -53,6 +54,22 @@ start_exploring()
 
 
 def third_floor():
+    option = ["1", "2"]
+    print(("The Third Floor is a higly forbidden area as very dangerous creatures roam here.. And yet here you are..\n"
+    "You are not allowed to stay here and Mr Filch is on his way to catch you and drag you to the principal's office\n"
+    "Take action now! You can either Hide or Run\n"
+    "Select 1 to Run\n"
+    "Select 2 to Hide"))
+    userInput = ""
+    while userInput not in option:
+        print("Please selecet 1 or 2")
+        userInput = input()
+        if userInput == "1":
+            dark_forest()
+        elif userInput == "2":
+            fluffy_dog()
+        else:
+            print("Please select 1 to Run or 2 to Hide")
 
 def dark_forest():
 
