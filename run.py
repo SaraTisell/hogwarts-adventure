@@ -29,6 +29,27 @@ print((f"{name} you have been placed in {dormitory}, which will suit you perfect
 f"Use your skill {user_dormitory_strenght} well, and we will meet again in the end."
 f"The best of luck to you {name}"))
 
+"""
+Function structure borrowed from https://www.makeuseof.com/python-text-adventure-game-create/
+"""
+
+def start_exploring():
+    option = [1, 2]
+    print(("It is time to begin your jorney to find the Philosopher's stone, you can either go to the Third Floor or the Dark Forest\n"
+    "Please select 1 for Third Floor\n"
+    "Please selecet 2 for Dark Forest "))
+    userInput = ()
+    while userInput not in option:
+        print("Please selecet 1 or 2")
+        userInput = input()
+        if userInput == 1:
+            third_floor()
+        elif userInput == 2:
+            dark_forest()
+        else:
+            print("Please select 1 for Third Floor or 2 for Dark Forest")
+
+start_exploring()
 
 
 def third_floor():
