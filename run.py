@@ -18,26 +18,26 @@ for dormitory in dormitories.keys():
     print(dormitory)
 
 
+
 # Select Dormitory
 def select_dormitory():
     print("We need to know your strenghts to make sure to put you in the right dormitory.\nPlease choose one of these four skills that best describes you greates strength! ")
-    dormitories_strengths = ["Bravery", "Curiosity", "Loyalty", "Ambition"]
-    print("Please selecet 1 for Bravery\n2 for Curiosity\n3 for Loyalty\n4 for Ambition")
-    user_dormitory_strenght = ""
+    for dormitory_strength in dormitories.values():
+        print(dormitory_strength)
    # dormitory = input()
 
 # Challenge description
-
-print((f"{name} you have been placed in {dormitory}, which will suit you perfectly based on your skill {user_dormitory_strenght}!\n"
+"""
+print((f"{name} you have been placed in {dormitory}, which will suit you perfectly based on your skill {}!\n"
 "We have a very important mission for you, we need you to find the Philosopher's stone before it is to late!\n"
 "Find the stone while you explore the magic within Hogwarts, but be careful, challenges will come in your way.\n"
-f"Use your skill {user_dormitory_strenght} well, and we will meet again in the end."
+f"Use your skill {} well, and we will meet again in the end."
 f"The best of luck to you {name}"))
-
+"""
 """
 Function structure borrowed from https://www.makeuseof.com/python-text-adventure-game-create/
 """
-
+"""
 def start_exploring():
     option = ["1", "2"]
     print(("It is time to begin your jorney to find the Philosopher's stone, you can either go to the Third Floor or the Dark Forest\n"
@@ -94,5 +94,5 @@ def game_win():
 
 
 
-
+"""
 
