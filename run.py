@@ -34,17 +34,17 @@ Function structure borrowed from https://www.makeuseof.com/python-text-adventure
 """
 
 def start_exploring():
-    option = [1, 2]
+    option = ["1", "2"]
     print(("It is time to begin your jorney to find the Philosopher's stone, you can either go to the Third Floor or the Dark Forest\n"
     "Please select 1 for Third Floor\n"
     "Please selecet 2 for Dark Forest "))
-    userInput = ()
+    userInput = ""
     while userInput not in option:
         print("Please selecet 1 or 2")
         userInput = input()
-        if userInput == 1:
+        if userInput == "1":
             third_floor()
-        elif userInput == 2:
+        elif userInput == "2":
             dark_forest()
         else:
             print("Please select 1 for Third Floor or 2 for Dark Forest")
