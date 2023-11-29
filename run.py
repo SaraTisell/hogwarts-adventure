@@ -1,3 +1,6 @@
+# Global list to use in functions
+dormitories = {"Gryffindor": "Bravery", "Ravenclaw": "Curiosity", "Hufflepuff": "Loyalty", "Slytherin": "Ambition"}
+
 # Description for game
 print("Welcome to Hogwarts Adventure")
 print("If you are ready to play the game please enter your name")
@@ -11,8 +14,9 @@ Welcome letter
 """
 print(f"Dear, {name}\nYou have been accepted to Hogwarts School for Witchcraft and Wizardry!")
 print("It is time to place you in the right dormitory, our four dormitories are:")
-dormitories = ["Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"]
-print(*dormitories, sep="\n")
+for dormitory in dormitories.keys():
+    print(dormitory)
+
 
 # Select Dormitory
 def select_dormitory():
