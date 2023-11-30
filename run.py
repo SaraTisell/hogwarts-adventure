@@ -14,7 +14,7 @@ Welcome letter
 """
 print(f"Dear, {name}\nYou have been accepted to Hogwarts School for Witchcraft and Wizardry!")
 print("It is time to place you in the right dormitory, our four dormitories are:")
-for dormitory in dormitories.keys():
+for dormitory in dormitories.values():
     print(dormitory)
 
 
@@ -22,12 +22,12 @@ for dormitory in dormitories.keys():
 # Select Dormitory
 def select_dormitory():
     print("We need to know your strenghts to make sure to put you in the right dormitory.\nPlease choose one of these four skills that best describes you greates strength! ")
-    for dormitory_strength in dormitories.values():
+    for dormitory_strength in dormitories.keys():
         print(dormitory_strength)
     userDormitoryStrength = input("Please write your selected strength:\n").capitalize()
-    while userDormitoryStrength not in dormitories.values():
+    while userDormitoryStrength not in dormitories.keys():
         print("Strengths: Bravery, Curiosity, Loyalty, Ambition")
-        userDormitoryStrength = input("Please write your selected strength:\n").capitalize()    
+        userDormitoryStrength = input("Please write your selected strength:\n").capitalize()   
     
     userDormitory = dormitories.get(userDormitoryStrength)
     
