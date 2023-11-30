@@ -1,5 +1,5 @@
 # Global list to use in functions
-dormitories = {"Gryffindor": "Bravery", "Ravenclaw": "Curiosity", "Hufflepuff": "Loyalty", "Slytherin": "Ambition"}
+dormitories = {"Bravery": "Gryffindor", "Curiosity": "Ravenclaw", "Loyalty": "Hufflepuff", "Ambition": "Slytherin"}
 
 # Description for game
 print("Welcome to Hogwarts Adventure")
