@@ -1,6 +1,7 @@
 # Global list to use in functions
 dormitories = {"Bravery": "Gryffindor", "Curiosity": "Ravenclaw", "Loyalty": "Hufflepuff", "Ambition": "Slytherin"}
 
+def welcome_to():
 # Description for game
 print("Welcome to Hogwarts Adventure")
 print("If you are ready to play the game please enter your name")
