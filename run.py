@@ -84,8 +84,8 @@ def third_floor():
 
 def dark_forest():
     option = ["1", "2"]
-    print((f"There are many magical creatures living in this forest, some of them are good and some are you worst nightmare!\n"
-        "The Dark Forest is no safe place for students, especially not you {name}..\n"
+    print(("There are many magical creatures living in this forest, some of them are good and some are you worst nightmare!\n"
+        f"The Dark Forest is no safe place for students, especially not you {name}..\n"
         "The Dark Lord knows what you are up to, he knows what you are trying to find\n"
         "He wants to stop you and have sent Dementors in your way\n"
         "Time to protect yourself, FAST cast a spell\n"
@@ -102,7 +102,7 @@ def dark_forest():
 
 def fluffy_dog():
     option = ["1", "2"]
-    print((f"You were able to escape Mr Filch, but we told you dangerous creatures roam here at the third floor\n"
+    print(("You were able to escape Mr Filch, but we told you dangerous creatures roam here at the third floor\n"
         "And you hide inside the same room as Fluffy, Hagrid's three-headed dog!\n"
         "Fluffy does not like other people than his loving Hagrid, but can easily be calmed down.\n"
         "He is on hiw way to attack you! You have to distract him\n"
@@ -142,6 +142,8 @@ def main():
     welcome_to()
     select_dormitory()
     start_exploring()
+    third_floor()
+    dark_forest()
 
 main ()
 
