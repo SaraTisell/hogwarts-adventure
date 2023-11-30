@@ -1,7 +1,7 @@
 # Global list to use in functions
 dormitories = {"Bravery": "Gryffindor", "Curiosity": "Ravenclaw", "Loyalty": "Hufflepuff", "Ambition": "Slytherin"}
 
-name = ""
+
 
 """
 Welcome text to user
@@ -9,6 +9,7 @@ Welcome text to user
 def welcome_to():
     print("Welcome to Hogwarts Adventure")
     print("If you are ready to play the game please enter your name")
+    global name
     name = input().capitalize()
     print("Thank you, lets play and have fun!")
     print()
@@ -79,9 +80,27 @@ def third_floor():
             fluffy_dog()
 
 
-"""
+
 
 def dark_forest():
+    option = ["1", "2"]
+    print((f"There are many magical creatures living in this forest, some of them are good and some are you worst nightmare!\n"
+        "The Dark Forest is no safe place for students, especially not you {name}..\n"
+        "The Dark Lord knows what you are up to, he knows what you are trying to find\n"
+        "He wants to stop you and have sent Dementors in your way\n"
+        "Time to protect yourself, FAST cast a spell\n"
+        "Select 1 for Expecto Patronum\n"
+        "Select 2 for Expelliarmus"))
+    user_input = input()
+    while user_input not in option:
+        print("Please selecet 1 or 2")
+        user_input = input()
+        if user_input == "1":
+            hagrids_hut()
+        else:
+            hospital_wing()
+
+    """
 
 def fluffy_dog():
 
