@@ -58,10 +58,9 @@ def start_exploring():
         userInput = input()
         if userInput == "1":
             third_floor()
-        elif userInput == "2":
-            dark_forest()
         else:
-            print("Please select 1 for Third Floor or 2 for Dark Forest")
+            dark_forest()
+        
 
 start_exploring()
 
@@ -78,10 +77,9 @@ def third_floor():
         userInput = input()
         if userInput == "1":
             dark_forest()
-        elif userInput == "2":
-            fluffy_dog()
         else:
-            print("Please select 1 to Run or 2 to Hide")
+            fluffy_dog()
+
 
 third_floor()
 """
