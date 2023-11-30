@@ -25,18 +25,18 @@ def select_dormitory():
     print("We need to know your strenghts to make sure to put you in the right dormitory.\nPlease choose one of these four skills that best describes you greates strength! ")
     for dormitory_strength in dormitories.keys():
         print(dormitory_strength)
-    userDormitoryStrength = input("Please write your selected strength:\n").capitalize()
-    while userDormitoryStrength not in dormitories.keys():
+    user_dormitory_strength = input("Please write your selected strength:\n").capitalize()
+    while user_dormitory_strength not in dormitories.keys():
         print("Strengths: Bravery, Curiosity, Loyalty, Ambition")
-        userDormitoryStrength = input("Please write your selected strength:\n").capitalize()   
+        user_dormitory_strength = input("Please write your selected strength:\n").capitalize()   
     
-    userDormitory = dormitories.get(userDormitoryStrength)
+    user_dormitory = dormitories.get(user_dormitory_strength)
     
     # Challenge description
-    print((f"{name} you have been placed in {userDormitory} , which will suit you perfectly based on your skill {userDormitoryStrength}!\n"
+    print((f"{name} you have been placed in {user_dormitory} , which will suit you perfectly based on your skill {user_dormitory_strength}!\n"
 "We have a very important mission for you, we need you to find the Philosopher's stone before it is to late!\n"
 "Find the stone while you explore the magic within Hogwarts, but be careful, challenges will come in your way.\n"
-f"Use your skill {userDormitoryStrength} well, and we will meet again in the end.\n"
+f"Use your skill {user_dormitory_strength} well, and we will meet again in the end.\n"
 f"The best of luck to you {name}"))
 
 
@@ -53,11 +53,11 @@ def start_exploring():
     print(("It is time to begin your jorney to find the Philosopher's stone, you can either go to the Third Floor or the Dark Forest\n"
     "Select 1 for Third Floor\n"
     "Selecet 2 for Dark Forest "))
-    userInput = input()
-    while userInput not in option:
+    user_input = input()
+    while user_input not in option:
         print("Please selecet 1 or 2")
-        userInput = input()
-        if userInput == "1":
+        user_input = input()
+        if user_input == "1":
             third_floor()
         else:
             dark_forest()
@@ -72,11 +72,11 @@ def third_floor():
     "Take action now! You can either Hide or Run\n"
     "Select 1 to Run\n"
     "Select 2 to Hide"))
-    userInput = input()
-    while userInput not in option:
+    user_input = input()
+    while user_input not in option:
         print("Please selecet 1 or 2")
-        userInput = input()
-        if userInput == "1":
+        user_input = input()
+        if user_input == "1":
             dark_forest()
         else:
             fluffy_dog()
