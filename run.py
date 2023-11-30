@@ -100,9 +100,25 @@ def dark_forest():
         else:
             hospital_wing()
 
-    """
-
 def fluffy_dog():
+    option = ["1", "2"]
+    print((f"You were able to escape Mr Filch, but we told you dangerous creatures roam here at the third floor\n"
+        "And you hide inside the same room as Fluffy, Hagrid's three-headed dog!\n"
+        "Fluffy does not like other people than his loving Hagrid, but can easily be calmed down.\n"
+        "He is on hiw way to attack you! You have to distract him\n"
+        "Select 1 to Play Music\n"
+        "Select 2 to Jump"))
+    user_input = input()
+    while user_input not in option:
+        print("Please selecet 1 or 2")
+        user_input = input()
+        if user_input == "1":
+            peeves_poltergeist()
+        else:
+            print("Jumping was not the way to calm that three-headed dog down\nYou are hurt and will meet madam Pomfrey at the hospital wing.")
+            hospital_wing()
+
+"""
 
 def hagrids_hut():
 
