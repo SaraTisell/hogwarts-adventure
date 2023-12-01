@@ -39,10 +39,10 @@ def select_dormitory():
     
     # Challenge description
     print((f"{name} you have been placed in {user_dormitory} , which will suit you perfectly based on your skill {user_dormitory_strength}!\n"
-        "We have a very important mission for you, we need you to find the Philosopher's stone before it is to late!\n"
-        "Find the stone while you explore the magic within Hogwarts, but be careful, challenges will come in your way.\n"
-        f"Use your skill {user_dormitory_strength} well, and we will meet again in the end.\n"
-        f"The best of luck to you {name}"))
+            "We have a very important mission for you, we need you to find the Philosopher's stone before it is to late!\n"
+            "Find the stone while you explore the magic within Hogwarts, but be careful, challenges will come in your way.\n"
+            f"Use your skill {user_dormitory_strength} well, and we will meet again in the end.\n"
+            f"The best of luck to you {name}"))
 
 
 """
@@ -51,8 +51,8 @@ Function structure borrowed from https://www.makeuseof.com/python-text-adventure
 def start_exploring():
     option = ["1", "2"]
     print(("It is time to begin your jorney to find the Philosopher's stone, you can either go to the Third Floor or the Dark Forest\n"
-        "Select 1 for Third Floor\n"
-        "Selecet 2 for Dark Forest "))
+            "Select 1 for Third Floor\n"
+            "Selecet 2 for Dark Forest "))
     user_input = input()
     while user_input not in option:
         print("Please select 1 or 2")
@@ -68,10 +68,10 @@ def start_exploring():
 def third_floor():
     option = ["1", "2"]
     print(("The Third Floor is a higly forbidden area as very dangerous creatures roam here.. And yet here you are..\n"
-        "You are not allowed to stay here and Mr Filch is on his way to catch you and drag you to the principal's office\n"
-        "Take action now! You can either Hide or Run\n"
-        "Select 1 to Run\n"
-        "Select 2 to Hide"))
+            "You are not allowed to stay here and Mr Filch is on his way to catch you and drag you to the principal's office\n"
+            "Take action now! You can either Hide or Run\n"
+            "Select 1 to Run\n"
+            "Select 2 to Hide"))
     user_input = input()
     while user_input not in option:
         print("Please select 1 or 2")
@@ -89,12 +89,12 @@ def third_floor():
 def dark_forest():
     option = ["1", "2"]
     print(("There are many magical creatures living in this forest, some of them are good and some are you worst nightmare!\n"
-        f"The Dark Forest is no safe place for students, especially not you {name}..\n"
-        "The Dark Lord knows what you are up to, he knows what you are trying to find\n"
-        "He wants to stop you and have sent Dementors in your way\n"
-        "Time to protect yourself, FAST cast a spell\n"
-        "Select 1 for Expecto Patronum\n"
-        "Select 2 for Expelliarmus"))
+            f"The Dark Forest is no safe place for students, especially not you {name}..\n"
+            "The Dark Lord knows what you are up to, he knows what you are trying to find\n"
+            "He wants to stop you and have sent Dementors in your way\n"
+            "Time to protect yourself, FAST cast a spell\n"
+            "Select 1 for Expecto Patronum\n"
+            "Select 2 for Expelliarmus"))
     user_input = input()
     while user_input not in option:
         print("Please select 1 or 2")
@@ -103,6 +103,7 @@ def dark_forest():
         hagrids_hut()
     else:
         if user_input == "2":
+            print("The dementors is to strong to be beaten by the expelliarmus spell, you are alive but hurt. Madame Pomfrey will meet you at the hospital wing.")
             hospital_wing()
     
     
@@ -110,11 +111,11 @@ def dark_forest():
 def fluffy_dog():
     option = ["1", "2"]
     print(("You were able to escape Mr Filch, but we told you dangerous creatures roam here at the third floor\n"
-        "And you hide inside the same room as Fluffy, Hagrid's three-headed dog!\n"
-        "Fluffy does not like other people than his loving Hagrid, but can easily be calmed down.\n"
-        "He is on hiw way to attack you! You have to distract him\n"
-        "Select 1 to Play Music\n"
-        "Select 2 to Jump"))
+            "And you hide inside the same room as Fluffy, Hagrid's three-headed dog!\n"
+            "Fluffy does not like other people than his loving Hagrid, but can easily be calmed down.\n"
+            "He is on hiw way to attack you! You have to distract him\n"
+            "Select 1 to Play Music\n"
+            "Select 2 to Jump"))
     user_input = input()
     while user_input not in option:
         print("Please selecet 1 or 2")
@@ -128,10 +129,45 @@ def fluffy_dog():
 
 
 
-"""
+
 def hagrids_hut():
+    option = ["1", "2"]
+    print((f"Oh dear, you must be {name}, nice to finally meet you, I am Hagrid - the groundskeeper here at Hogwarts\n"
+            f"I saw what happened in the Dark Forest, nice patrounus you got there, the {user_patronus} really scared the dementors away!\n"
+            f"You are not far from finding the Philosopher's stone now {name}..\n"
+            "I can not tell you how to find it, but if you are able to answer my question, this adventure will soon be over\n"
+            "Who is the only known maker of the Philosopher's stone?\n"
+            "Select 1 for Nicolas Flamel\n"
+            "Select 2 for Gellert Grindelwald"))
+    user_input = input()
+    while user_input not in option:
+        print("Please selecet 1 or 2")
+        user_input = input()
+    if user_input == "1":
+        game_win()
+    else:
+        if user_input == "2":
+            prof_dumbledore()
 
 def hospital_wing():
+    option = ["1", "2"]
+    print((f"Poor {name}, finally you woke up!\n"
+            f"You had some serious injuries, but no worries I was able to cure them.\n"
+            f"Your friends left you a lot of sweets to make you feel better.\n"
+            "Here try one, and you will be up walking again.\n"
+            "Select 1 for Bertie Botts Every Flavor Beans\n"
+            "Select 2 for Lemon Drop"))
+    user_input = input()
+    while user_input not in option:
+        print("Please selecet 1 or 2")
+        user_input = input()
+    if user_input == "1":
+        print("Eeeew I bet you got a bugger flavor on that bean!")
+        peeves_poltergeist()
+    else:
+        if user_input == "2":
+            print("Oh a Lemon Drop, that is my favourite ")
+            prof_dumbledore()
 
 def peeves_poltergeist():
 
