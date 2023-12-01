@@ -55,12 +55,14 @@ def start_exploring():
         "Selecet 2 for Dark Forest "))
     user_input = input()
     while user_input not in option:
-        print("Please selecet 1 or 2")
+        print("Please select 1 or 2")
         user_input = input()
-        if user_input == "1":
-            third_floor()
-        else:
-            dark_forest()
+    if user_input == "1":
+        third_floor()
+    elif user_input == "2":
+        dark_forest()
+    else:
+        print("Please select 1 or 2")
         
 
 def third_floor():
@@ -72,12 +74,14 @@ def third_floor():
         "Select 2 to Hide"))
     user_input = input()
     while user_input not in option:
-        print("Please selecet 1 or 2")
+        print("Please select 1 or 2")
         user_input = input()
-        if user_input == "1":
-            dark_forest()
-        else:
-            fluffy_dog()
+    if user_input == "1":
+        dark_forest()
+    elif user_input == "2":
+        fluffy_dog()
+    else:
+        print("Please select 1 or 2")
 
 
 
@@ -93,12 +97,15 @@ def dark_forest():
         "Select 2 for Expelliarmus"))
     user_input = input()
     while user_input not in option:
-        print("Please selecet 1 or 2")
+        print("Please select 1 or 2")
         user_input = input()
-        if user_input == "1":
-            hagrids_hut()
-        else:
-            hospital_wing()
+    if user_input == "1":
+        hagrids_hut()
+    elif user_input == "2":
+        hospital_wing()
+    else:
+        print("Please select 1 or 2")
+    
 
 def fluffy_dog():
     option = ["1", "2"]
@@ -112,14 +119,16 @@ def fluffy_dog():
     while user_input not in option:
         print("Please selecet 1 or 2")
         user_input = input()
-        if user_input == "1":
-            peeves_poltergeist()
-        else:
-            print("Jumping was not the way to calm that three-headed dog down\nYou are hurt and will meet madam Pomfrey at the hospital wing.")
-            hospital_wing()
+    if user_input == "1":
+        peeves_poltergeist()
+    elif user_input == "2":
+        print("Jumping was not the way to calm that three-headed dog down\nYou are hurt and will meet madam Pomfrey at the hospital wing.")
+        hospital_wing()
+    else:
+        print("Please select 1 or 2")
+
 
 """
-
 def hagrids_hut():
 
 def hospital_wing():
