@@ -133,7 +133,7 @@ def fluffy_dog():
 def hagrids_hut():
     option = ["1", "2"]
     print((f"Oh dear, you must be {name}, nice to finally meet you, I am Hagrid - the groundskeeper here at Hogwarts\n"
-            f"I saw what happened in the Dark Forest, nice patrounus you got there, the {user_patronus} really scared the dementors away!\n"
+            "I saw what happened in the Dark Forest, nice patrounus you got there, the really scared the dementors away!\n"
             f"You are not far from finding the Philosopher's stone now {name}..\n"
             "I can not tell you how to find it, but if you are able to answer my question, this adventure will soon be over\n"
             "Who is the only known maker of the Philosopher's stone?\n"
@@ -175,10 +175,10 @@ def peeves_poltergeist():
             "I bet you walking these corridores to find a particular stone?\n"
             "YOU WILL NOT FIND IT!!!\n"
             "Here AT LEAST...\n"
-            "If you answer my question correct, you can be lucky"
-            "But if you are wrong, this will be the end for you!!"
-            "HAHA just kidding, but it will be the end of your journey"
-            f"So {name}, What Is the ability of the Philosopher's Stone? "
+            "If you answer my question correct, you can be lucky\n"
+            "But if you are wrong, this will be the end for you!!\n"
+            "HAHA just kidding, but it will be the end of your journey\n"
+            f"So {name}, What Is the ability of the Philosopher's Stone?\n"
             "Select 1 for the ability to make a person immortal \n"
             "Select 2 for the ability to wake people from the dead"))
     user_input = input()
@@ -192,14 +192,33 @@ def peeves_poltergeist():
             game_lost()
 
 def prof_dumbledore():
-
+    option = ["1", "2"]
+    print((f"It is an honor to meet you {name}, I am professor Albus Dumbledore\n"    
+            "You have done a fantastic job during you journey here at Hogwarts\n"
+            "I am more than impressed over you ability to fight the challenges that have come in your way.\n"
+            f"You are just one step away from finding the stone {name}\n"
+            "All you have to do is to know how to get it.\n"
+            "Nicolas Flamel an I came up with a very clever way oin how the stone could be found...\n"
+            "'The only way to find the store \n"
+            "\n"
+            "Select 1 for  \n"
+            "Select 2 for "))
+    user_input = input()
+    while user_input not in option:
+        print("Please selecet 1 or 2")
+        user_input = input()
+    if user_input == "1":
+        game_lost()
+    else:
+        if user_input == "2":
+            game_win()
+"""
 def game_lost():
 
 def game_win():
-
-
-
 """
+
+
 """
 Function to start the game
 """
@@ -209,6 +228,11 @@ def main():
     start_exploring()
     third_floor()
     dark_forest()
+    fluffy_dog()
+    hagrids_hut()
+    hospital_wing()
+    peeves_poltergeist()
+
 
 main ()
 
