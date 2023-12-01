@@ -59,10 +59,10 @@ def start_exploring():
         user_input = input()
     if user_input == "1":
         third_floor()
-    elif user_input == "2":
-        dark_forest()
     else:
-        print("Please select 1 or 2")
+        if user_input == "2":
+            dark_forest()
+    
         
 
 def third_floor():
@@ -78,10 +78,10 @@ def third_floor():
         user_input = input()
     if user_input == "1":
         dark_forest()
-    elif user_input == "2":
-        fluffy_dog()
     else:
-        print("Please select 1 or 2")
+        if user_input == "2":
+            fluffy_dog()
+    
 
 
 
@@ -101,10 +101,10 @@ def dark_forest():
         user_input = input()
     if user_input == "1":
         hagrids_hut()
-    elif user_input == "2":
-        hospital_wing()
     else:
-        print("Please select 1 or 2")
+        if user_input == "2":
+            hospital_wing()
+    
     
 
 def fluffy_dog():
@@ -121,11 +121,11 @@ def fluffy_dog():
         user_input = input()
     if user_input == "1":
         peeves_poltergeist()
-    elif user_input == "2":
-        print("Jumping was not the way to calm that three-headed dog down\nYou are hurt and will meet madam Pomfrey at the hospital wing.")
-        hospital_wing()
     else:
-        print("Please select 1 or 2")
+        if user_input == "2":
+            print("Jumping was not the way to calm that three-headed dog down\nYou are hurt and will meet madam Pomfrey at the hospital wing.")
+            hospital_wing()
+
 
 
 """
