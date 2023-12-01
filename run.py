@@ -152,8 +152,8 @@ def hagrids_hut():
 def hospital_wing():
     option = ["1", "2"]
     print((f"Poor {name}, finally you woke up!\n"
-            f"You had some serious injuries, but no worries I was able to cure them.\n"
-            f"Your friends left you a lot of sweets to make you feel better.\n"
+            "You had some serious injuries, but no worries I was able to cure them.\n"
+            "Your friends left you a lot of sweets to make you feel better.\n"
             "Here try one, and you will be up walking again.\n"
             "Select 1 for Bertie Botts Every Flavor Beans\n"
             "Select 2 for Lemon Drop"))
@@ -166,10 +166,30 @@ def hospital_wing():
         peeves_poltergeist()
     else:
         if user_input == "2":
-            print("Oh a Lemon Drop, that is my favourite ")
+            print("Oh a Lemon Drop, that is my favourite")
             prof_dumbledore()
 
 def peeves_poltergeist():
+    option = ["1", "2"]
+    print((f"HAHAHA, you silly goose, I am Peeves the poltergeist that makes Hogwarts so fun!\n"    
+            "I bet you walking these corridores to find a particular stone?\n"
+            "YOU WILL NOT FIND IT!!!\n"
+            "Here AT LEAST...\n"
+            "If you answer my question correct, you can be lucky"
+            "But if you are wrong, this will be the end for you!!"
+            "HAHA just kidding, but it will be the end of your journey"
+            f"So {name}, What Is the ability of the Philosopher's Stone? "
+            "Select 1 for the ability to make a person immortal \n"
+            "Select 2 for the ability to wake people from the dead"))
+    user_input = input()
+    while user_input not in option:
+        print("Please selecet 1 or 2")
+        user_input = input()
+    if user_input == "1":
+        game_win()
+    else:
+        if user_input == "2":
+            game_lost()
 
 def prof_dumbledore():
 
