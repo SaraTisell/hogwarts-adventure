@@ -250,15 +250,6 @@ def main():
     welcome_to()
     select_dormitory()
     start_exploring()
-    third_floor()
-    dark_forest()
-    fluffy_dog()
-    hagrids_hut()
-    hospital_wing()
-    peeves_poltergeist()
-    prof_dumbledore()
-    game_lost()
-    game_win()
 
 
 main ()
