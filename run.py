@@ -1,3 +1,5 @@
+import os
+
 # Global list to use in functions
 dormitories = {"Bravery": "Gryffindor", "Curiosity": "Ravenclaw", "Loyalty": "Hufflepuff", "Ambition": "Slytherin"}
 
@@ -226,9 +228,11 @@ def game_lost():
         print("Please write Yes or No")
         user_input = input().capitalize()
     if user_input == "Yes":
+        clear_screen()
         main()
     else:
         if user_input == "No":
+            clear_screen()
             print(f"Thank you {name} for playing")
             
 
@@ -241,11 +245,19 @@ def game_win():
         print("Please write Yes or No")
         user_input = input().capitalize()
     if user_input == "Yes":
+        clear_screen()
         main()
     else:
         if user_input == "No":
+            clear_screen()
             print(f"Thank you {name} for playing")
 
+
+"""
+Function to clear screen when user have won or lost.
+"""
+def clear_screen():
+    os.system("clear")
 
 
 """
