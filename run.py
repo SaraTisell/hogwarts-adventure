@@ -1,8 +1,6 @@
 # Global list to use in functions
 dormitories = {"Bravery": "Gryffindor", "Curiosity": "Ravenclaw", "Loyalty": "Hufflepuff", "Ambition": "Slytherin"}
 
-
-
 """
 Welcome text to user
 """
@@ -47,46 +45,49 @@ def select_dormitory():
 
 """
 Function structure borrowed from https://www.makeuseof.com/python-text-adventure-game-create/
+First choise for user to determine path
 """
 def start_exploring():
     option = ["1", "2"]
     print(("It is time to begin your jorney to find the Philosopher's stone, you can either go to the Third Floor or the Dark Forest\n"
             "Select 1 for Third Floor\n"
-            "Selecet 2 for Dark Forest "))
+            "Selecet 2 for Dark Forest ")) # Challenge description for the user
     user_input = input()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please select 1 or 2")
         user_input = input()
-    if user_input == "1":
-        third_floor()
+    if user_input == "1": # Takes the user to the Third Floor
+        third_floor() 
     else:
-        if user_input == "2":
-            dark_forest()
+        if user_input == "2": # Takes the user to the Dark Forest
+            dark_forest() 
     
         
 
 def third_floor():
+    print("---YOU HAVE ENTERED THE THIRD FLOOR---") # Text to show user where they are
     option = ["1", "2"]
     print(("The Third Floor is a higly forbidden area as very dangerous creatures roam here.. And yet here you are..\n"
             "You are not allowed to stay here and Mr Filch is on his way to catch you and drag you to the principal's office\n"
             "Take action now! You can either Hide or Run\n"
             "Select 1 to Run\n"
-            "Select 2 to Hide"))
+            "Select 2 to Hide")) # Challenge description for the user
     user_input = input()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please select 1 or 2")
         user_input = input()
-    if user_input == "1":
-        dark_forest()
+    if user_input == "1": # Takes the user to the Dark Forest
+        dark_forest() 
     else:
-        if user_input == "2":
-            fluffy_dog()
+        if user_input == "2": # Takes the user to meet Fluffy
+            fluffy_dog() 
     
 
 
 
 
 def dark_forest():
+    print("---YOU HAVE ENTERED THE DARK FOREST---") # Text to show user where they are
     option = ["1", "2"]
     print(("There are many magical creatures living in this forest, some of them are good and some are you worst nightmare!\n"
             f"The Dark Forest is no safe place for students, especially not you {name}..\n"
@@ -94,17 +95,17 @@ def dark_forest():
             "He wants to stop you and have sent Dementors in your way\n"
             "Time to protect yourself, FAST cast a spell\n"
             "Select 1 for Expecto Patronum\n"
-            "Select 2 for Expelliarmus"))
+            "Select 2 for Expelliarmus")) # Challenge description for the user
     user_input = input()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please select 1 or 2")
         user_input = input()
-    if user_input == "1":
+    if user_input == "1": # Takes the user to Hagrid's Hut
         hagrids_hut()
     else:
-        if user_input == "2":
+        if user_input == "2": # Takes the user to Hospital Wing
             print("The dementors is to strong to be beaten by the expelliarmus spell, you are alive but hurt. Madame Pomfrey will meet you at the hospital wing.")
-            hospital_wing()
+            hospital_wing() 
     
     
 
@@ -115,15 +116,15 @@ def fluffy_dog():
             "Fluffy does not like other people than his loving Hagrid, but can easily be calmed down.\n"
             "He is on hiw way to attack you! You have to distract him\n"
             "Select 1 to Play Music\n"
-            "Select 2 to Jump"))
+            "Select 2 to Jump")) # Challenge description for the user
     user_input = input()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please selecet 1 or 2")
         user_input = input()
-    if user_input == "1":
+    if user_input == "1": # Takes the user to meet Peeves the poltergeist
         peeves_poltergeist()
     else:
-        if user_input == "2":
+        if user_input == "2": # Takes the user to Hospital wing
             print("Jumping was not the way to calm that three-headed dog down\nYou are hurt and will meet madam Pomfrey at the hospital wing.")
             hospital_wing()
 
@@ -131,6 +132,7 @@ def fluffy_dog():
 
 
 def hagrids_hut():
+    print("---YOU HAVE ENTERED HAGRID'S HUT---") # Text to show user where they are
     option = ["1", "2"]
     print((f"Oh dear, you must be {name}, nice to finally meet you, I am Hagrid - the groundskeeper here at Hogwarts\n"
             "I saw what happened in the Dark Forest, nice patrounus you got there, the really scared the dementors away!\n"
@@ -138,41 +140,43 @@ def hagrids_hut():
             "I can not tell you how to find it, but if you are able to answer my question, this adventure will soon be over\n"
             "Who is the only known maker of the Philosopher's stone?\n"
             "Select 1 for Nicolas Flamel\n"
-            "Select 2 for Gellert Grindelwald"))
+            "Select 2 for Gellert Grindelwald")) # Challenge description for the user
     user_input = input()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please selecet 1 or 2")
         user_input = input()
-    if user_input == "1":
+    if user_input == "1": # The answer is correct and the user wins the game
         game_win()
     else:
-        if user_input == "2":
+        if user_input == "2": # Takes the user to meet Proffessor Dumbledore
             prof_dumbledore()
 
 def hospital_wing():
+    print("---YOU HAVE ENTERED THE HOSPITAL WING---") # Text to show user where they are
     option = ["1", "2"]
     print((f"Poor {name}, finally you woke up!\n"
             "You had some serious injuries, but no worries I was able to cure them.\n"
             "Your friends left you a lot of sweets to make you feel better.\n"
             "Here try one, and you will be up walking again.\n"
             "Select 1 for Bertie Botts Every Flavor Beans\n"
-            "Select 2 for Lemon Drop"))
+            "Select 2 for Lemon Drop")) # Challenge description for the user
     user_input = input()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please selecet 1 or 2")
         user_input = input()
-    if user_input == "1":
+    if user_input == "1": # Takes the user to meet Peeves the poltergeist
         print("Eeeew I bet you got a bugger flavor on that bean!")
         peeves_poltergeist()
     else:
-        if user_input == "2":
+        if user_input == "2": # Takes the user to meet Proffessor Dumbledore
             print("Oh a Lemon Drop, that is my favourite")
             prof_dumbledore()
 
 def peeves_poltergeist():
+    print("---YOU HAVE ENTERED THE CORRIDOR---") # Text to show user where they are
     option = ["1", "2"]
     print((f"HAHAHA, you silly goose, I am Peeves the poltergeist that makes Hogwarts so fun!\n"    
-            "I bet you walking these corridores to find a particular stone?\n"
+            "I bet you walking these corridors to find a particular stone?\n"
             "YOU WILL NOT FIND IT!!!\n"
             "Here AT LEAST...\n"
             "If you answer my question correct, you can be lucky\n"
@@ -180,18 +184,19 @@ def peeves_poltergeist():
             "HAHA just kidding, but it will be the end of your journey\n"
             f"So {name}, What Is the ability of the Philosopher's Stone?\n"
             "Select 1 for the ability to make a person immortal \n"
-            "Select 2 for the ability to wake people from the dead"))
+            "Select 2 for the ability to wake people from the dead")) # Challenge description for the user
     user_input = input()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please selecet 1 or 2")
         user_input = input()
-    if user_input == "1":
+    if user_input == "1": # The answer is correct and the user wins the game
         game_win()
     else:
-        if user_input == "2":
+        if user_input == "2": # The answer is wrong and the user loses the game
             game_lost()
 
 def prof_dumbledore():
+    print("---YOU HAVE ENTERED THE CORRIDOR---") # Text to show user where they are
     option = ["1", "2"]
     print((f"It is an honor to meet you {name}, I am professor Albus Dumbledore\n"    
             "You have done a fantastic job during you journey here at Hogwarts\n"
@@ -201,15 +206,15 @@ def prof_dumbledore():
             "Nicolas Flamel an I came up with a very clever idéa on how the stone could be found...\n"
             "So how can a person find the stone?\n"
             "Select 1 for the Desire to find it and use it\n"
-            "Select 2 for the Desire to find it and not use it"))
+            "Select 2 for the Desire to find it and not use it")) # Challenge description for the user
     user_input = input()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please selecet 1 or 2")
         user_input = input()
-    if user_input == "1":
+    if user_input == "1": # The asnwer is wrong and the user loses the game
         game_lost()
     else:
-        if user_input == "2":
+        if user_input == "2": # The answer is correct and the user wins the game
             game_win()
 
 def game_lost():
@@ -217,7 +222,7 @@ def game_lost():
     print((f"you lost {name}\n"
             "Would you like to play again? Yes/No"))
     user_input = input().capitalize()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please write Yes or No")
         user_input = input().capitalize()
     if user_input == "Yes":
@@ -232,7 +237,7 @@ def game_win():
     print((f"You win {name}\n"
             "Would you like to play again? Yes/No"))
     user_input = input().capitalize()
-    while user_input not in option:
+    while user_input not in option: # Displays message until user inupt is valid to option
         print("Please write Yes or No")
         user_input = input().capitalize()
     if user_input == "Yes":
