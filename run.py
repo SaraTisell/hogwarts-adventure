@@ -196,13 +196,12 @@ def prof_dumbledore():
     print((f"It is an honor to meet you {name}, I am professor Albus Dumbledore\n"    
             "You have done a fantastic job during you journey here at Hogwarts\n"
             "I am more than impressed over you ability to fight the challenges that have come in your way.\n"
-            f"You are just one step away from finding the stone {name}\n"
-            "All you have to do is to know how to get it.\n"
-            "Nicolas Flamel an I came up with a very clever way oin how the stone could be found...\n"
-            "'The only way to find the store \n"
-            "\n"
-            "Select 1 for  \n"
-            "Select 2 for "))
+            f"You are just one step away from finding the stone now {name}\n"
+            "All you have to do is to answer my question...\n"
+            "Nicolas Flamel an I came up with a very clever idéa on how the stone could be found...\n"
+            "So how can a person find the stone?\n"
+            "Select 1 for the Desire to find it and use it\n"
+            "Select 2 for the Desire to find it and not use it"))
     user_input = input()
     while user_input not in option:
         print("Please selecet 1 or 2")
@@ -212,11 +211,36 @@ def prof_dumbledore():
     else:
         if user_input == "2":
             game_win()
-"""
+
 def game_lost():
+    option = ["Yes", "No"]
+    print((f"you lost {name}\n"
+            "Would you like to play again? Yes/No"))
+    user_input = input().capitalize()
+    while user_input not in option:
+        print("Please write Yes or No")
+        user_input = input().capitalize()
+    if user_input == "Yes":
+        welcome_to()
+    else:
+        if user_input == "No":
+            print(f"Thank you {name} for playing")
+            
 
 def game_win():
-"""
+    option = ["Yes", "No"]
+    print((f"You win {name}\n"
+            "Would you like to play again? Yes/No"))
+    user_input = input().capitalize()
+    while user_input not in option:
+        print("Please write Yes or No")
+        user_input = input().capitalize()
+    if user_input == "Yes":
+        welcome_to()
+    else:
+        if user_input == "No":
+            print(f"Thank you {name} for playing")
+
 
 
 """
@@ -232,6 +256,9 @@ def main():
     hagrids_hut()
     hospital_wing()
     peeves_poltergeist()
+    prof_dumbledore()
+    game_lost()
+    game_win()
 
 
 main ()
