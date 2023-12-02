@@ -27,7 +27,8 @@ def welcome_to():
 
 # Select Dormitory
 def select_dormitory():
-    print("We need to know your strenghts to make sure to put you in the right dormitory.\nPlease choose one of these four skills that best describes you greates strength! ")
+    print("We need to know your strenghts to make sure to put you in the right dormitory.\n"
+            "Please choose one of these four skills that best describes you greates strength!")
     for dormitory_strength in dormitories.keys():
         print(dormitory_strength)
     user_dormitory_strength = input("Please write your selected strength:\n").capitalize()
@@ -44,6 +45,7 @@ def select_dormitory():
             f"Use your skill {user_dormitory_strength} well, and we will meet again in the end.\n"
             f"The best of luck to you {name}"))
 
+    clear_screen()
 
 """
 Function structure borrowed from https://www.makeuseof.com/python-text-adventure-game-create/
@@ -59,9 +61,11 @@ def start_exploring():
         print("Please select 1 or 2")
         user_input = input()
     if user_input == "1": # Takes the user to the Third Floor
+        clear_screen()
         third_floor() 
     else:
         if user_input == "2": # Takes the user to the Dark Forest
+            clear_screen()
             dark_forest() 
     
         
@@ -79,9 +83,11 @@ def third_floor():
         print("Please select 1 or 2")
         user_input = input()
     if user_input == "1": # Takes the user to the Dark Forest
+        clear_screen()
         dark_forest() 
     else:
         if user_input == "2": # Takes the user to meet Fluffy
+            clear_screen()
             fluffy_dog() 
     
 
@@ -103,9 +109,12 @@ def dark_forest():
         print("Please select 1 or 2")
         user_input = input()
     if user_input == "1": # Takes the user to Hagrid's Hut
+        clear_screen()
         hagrids_hut()
     else:
         if user_input == "2": # Takes the user to Hospital Wing
+            clear_screen()
+            print("---YOU HAVE ENTERED THE HOSPITAL WING---") # Text to show user where they are
             print("The dementors is to strong to be beaten by the expelliarmus spell, you are alive but hurt. Madame Pomfrey will meet you at the hospital wing.")
             hospital_wing() 
     
@@ -124,9 +133,12 @@ def fluffy_dog():
         print("Please selecet 1 or 2")
         user_input = input()
     if user_input == "1": # Takes the user to meet Peeves the poltergeist
+        clear_screen()
         peeves_poltergeist()
     else:
         if user_input == "2": # Takes the user to Hospital wing
+            clear_screen()
+            print("---YOU HAVE ENTERED THE HOSPITAL WING---") # Text to show user where they are
             print("Jumping was not the way to calm that three-headed dog down\nYou are hurt and will meet madam Pomfrey at the hospital wing.")
             hospital_wing()
 
@@ -148,13 +160,14 @@ def hagrids_hut():
         print("Please selecet 1 or 2")
         user_input = input()
     if user_input == "1": # The answer is correct and the user wins the game
+        clear_screen()
         game_win()
     else:
         if user_input == "2": # Takes the user to meet Proffessor Dumbledore
+            clear_screen()
             prof_dumbledore()
 
 def hospital_wing():
-    print("---YOU HAVE ENTERED THE HOSPITAL WING---") # Text to show user where they are
     option = ["1", "2"]
     print((f"Poor {name}, finally you woke up!\n"
             "You had some serious injuries, but no worries I was able to cure them.\n"
@@ -167,11 +180,13 @@ def hospital_wing():
         print("Please selecet 1 or 2")
         user_input = input()
     if user_input == "1": # Takes the user to meet Peeves the poltergeist
+        clear_screen()
         print("---YOU HAVE ENTERED THE CORRIDOR---") # Text to show user where they are
         print("Eeeew I bet you got a bugger flavor on that bean!") # Comment from Peeves
         peeves_poltergeist()
     else:
         if user_input == "2": # Takes the user to meet Proffessor Dumbledore
+            clear_screen()
             print("---YOU HAVE ENTERED THE CORRIDOR---") # Text to show user where they are
             print("Oh a Lemon Drop, that is my favourite") #Comment from Proffessor Dumbledore
             prof_dumbledore()
@@ -193,9 +208,11 @@ def peeves_poltergeist():
         print("Please selecet 1 or 2")
         user_input = input()
     if user_input == "1": # The answer is correct and the user wins the game
+        clear_screen()
         game_win()
     else:
         if user_input == "2": # The answer is wrong and the user loses the game
+            clear_screen()
             game_lost()
 
 def prof_dumbledore():
@@ -214,9 +231,11 @@ def prof_dumbledore():
         print("Please selecet 1 or 2")
         user_input = input()
     if user_input == "1": # The asnwer is wrong and the user loses the game
+        clear_screen()
         game_lost()
     else:
         if user_input == "2": # The answer is correct and the user wins the game
+            clear_screen()
             game_win()
 
 def game_lost():
@@ -254,6 +273,7 @@ def game_win():
 
 
 """
+Borrowed from https://www.101computing.net/python-typing-text-effect/
 Function to clear screen when user have won or lost.
 """
 def clear_screen():
