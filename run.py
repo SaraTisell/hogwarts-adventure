@@ -11,14 +11,15 @@ dormitories = {"Bravery": Fore.RED + "Gryffindor" + Style.RESET_ALL,
 
 
 
-"""
-Welcome text to user
-"""
+
 def welcome_to():
 
     """
-    Hogwarts logo borrowed from https://emojicombos.com/harry-potter-ascii-art
+    Welcome text to user
+    Asking for name input to start of the game
     """
+    #Hogwarts logo borrowed from https://emojicombos.com/harry-potter-ascii-art
+    
     print("""⠀⠀⠀⠀⠀⢠⣾⣶⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠟⢂⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣦⣄⣀⡀⠀⠀⣀⣀⣠⠞⣉⡀⠀⠀⠂⢀⠀⠀⠀⠀
 ⠀⣠⣶⣿⣿⣿⣇⢶⢹⡿⠋⠻⣿⣿⣦⠞⠛⣽⣷⡿⠟⢿⣦⢀⣴⡿⠿⣶⠀⠀
@@ -46,7 +47,7 @@ def welcome_to():
 
     """
     Start game
-    Welcome letter
+    Welcome letter containing dormitories
     """
     
     print(f"Dear, {name}\nYou have been accepted"
@@ -59,8 +60,12 @@ def welcome_to():
 
 
 
-# Select Dormitory
+
 def select_dormitory():
+
+    """
+    Function to assagin the user in to the right dormitory based on user input from key values in dormitory list
+    """
     print()
     print("We need to know your strenghts to make sure to put you in the right dormitory.\n"
             "Please choose one of these four skills that best describes you greates strength!")
@@ -91,11 +96,13 @@ def select_dormitory():
 
    
 
-"""
-Function structure borrowed from https://www.makeuseof.com/python-text-adventure-game-create/
-First choise for user to determine path
-"""
+
 def start_exploring():
+
+    """
+    Function structure borrowed from https://www.makeuseof.com/python-text-adventure-game-create/
+    First choise for user to determine path
+    """
     option = ["1", "2"]
     print(("It is time to begin your jorney to find the Philosopher's stone,\n"
             "you can either go to the Third Floor or the Dark Forest\n"
@@ -116,6 +123,12 @@ def start_exploring():
         
 
 def third_floor():
+
+    """
+    Function for challenge at the Third Floor
+    Containing challenge description
+    User input will determine the games path
+    """
     print(Fore.MAGENTA + "---YOU HAVE ENTERED THE THIRD FLOOR---" + Style.RESET_ALL) # Text to show user where they are
     option = ["1", "2"]
     print(("The Third Floor is a higly forbidden area as very dangerous creatures roam here.. And yet here you are..\n"
@@ -140,6 +153,12 @@ def third_floor():
 
 
 def dark_forest():
+
+    """
+    Function for challenge the Dark Forest
+    Containing challenge description
+    User input will determine game path
+    """
     print(Fore.MAGENTA +"---YOU HAVE ENTERED THE DARK FOREST---" + Style.RESET_ALL) # Text to show user where they are
     option = ["1", "2"]
     print(("There are many magical creatures living in this forest, some of them are good and some are you worst nightmare!\n"
@@ -159,13 +178,19 @@ def dark_forest():
     else:
         if user_input == "2": # Takes the user to Hospital Wing
             clear_screen()
-            print("---YOU HAVE ENTERED THE HOSPITAL WING---") # Text to show user where they are
+            print(Fore.MAGENTA +"---YOU HAVE ENTERED THE HOSPITAL WING---" + Style.RESET_ALL) # Text to show user where they are
             print("The dementors is to strong to be beaten by the expelliarmus spell, you are alive but hurt. Madame Pomfrey will meet you at the hospital wing.")
             hospital_wing() 
     
     
 
 def fluffy_dog():
+
+    """
+    Function for challenge Fluffy the three headed dog
+    Containing challenge description
+    User input will determine game path
+    """
     option = ["1", "2"]
     print(("You were able to escape Mr Filch,\n"
             "but we told you dangerous creatures roam here at the third floor\n"
@@ -180,11 +205,12 @@ def fluffy_dog():
         user_input = input()
     if user_input == "1": # Takes the user to meet Peeves the poltergeist
         clear_screen()
+        print(Fore.MAGENTA +"---YOU HAVE ENTERED THE CORRIDOR---" + Style.RESET_ALL)
         peeves_poltergeist()
     else:
         if user_input == "2": # Takes the user to Hospital wing
             clear_screen()
-            print("---YOU HAVE ENTERED THE HOSPITAL WING---") # Text to show user where they are
+            print(Fore.MAGENTA +"---YOU HAVE ENTERED THE HOSPITAL VING---" + Style.RESET_ALL) # Text to show user where they are
             print("Jumping was not the way to calm that three-headed dog down\nYou are hurt and will meet madam Pomfrey at the hospital wing.")
             hospital_wing()
 
@@ -192,7 +218,7 @@ def fluffy_dog():
 
 
 def hagrids_hut():
-    print("---YOU HAVE ENTERED HAGRID'S HUT---") # Text to show user where they are
+    print(Fore.MAGENTA +"---YOU HAVE ENTERED HAGRID'S HUT---" + Style.RESET_ALL) # Text to show user where they are
     option = ["1", "2"]
     print((f"Oh dear, you must be {name}, nice to finally meet you, I am Hagrid - the groundskeeper here at Hogwarts\n"
             "I saw what happened in the Dark Forest, nice patrounus you got there, the really scared the dementors away!\n"
