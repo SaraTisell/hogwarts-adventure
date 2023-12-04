@@ -50,7 +50,7 @@ def welcome_to():
     Welcome letter containing dormitories
     """
     
-    print(f"Dear, {name}\nYou have been accepted"
+    print(f"Dear, {name}\nYou have been accepted "
             "to Hogwarts School for Witchcraft and Wizardry!")
     time.sleep(1)
     print("It is time to place you in the right dormitory, our four dormitories are:")
@@ -76,7 +76,8 @@ def select_dormitory():
     while user_dormitory_strength not in dormitories.keys():
         print("Strengths: Bravery, Curiosity, Loyalty, Ambition")
         user_dormitory_strength = input("Please write your selected strength:\n").capitalize()   
-
+    
+    global user_dormitory
     user_dormitory = dormitories.get(user_dormitory_strength)
 
     clear_screen()
@@ -114,11 +115,11 @@ def start_exploring():
         user_input = input()
     if user_input == "1": # Takes the user to the Third Floor
         clear_screen()
-        third_floor() 
+        third_floor()
     else:
         if user_input == "2": # Takes the user to the Dark Forest
             clear_screen()
-            dark_forest() 
+            dark_forest()
     
         
 
@@ -244,6 +245,8 @@ def hagrids_hut():
     else:
         if user_input == "2": # Takes the user to meet Proffessor Dumbledore
             clear_screen()
+            print(f"To bad {name}, that was not the one... but come with me! I want you to meet someone special.")
+            print()
             prof_dumbledore()
 
 def hospital_wing():
@@ -288,11 +291,11 @@ def peeves_poltergeist():
     print((f"HAHAHA, you silly goose, I am Peeves the poltergeist that makes Hogwarts so fun!\n"    
             "I bet you walking these corridors to find a particular stone?\n"
             "YOU WILL NOT FIND IT!!!\n"
-            "Here AT LEAST...\n"
+            "Not here AT LEAST...\n"
             "If you answer my question correct, you can be lucky\n"
             "But if you are wrong, this will be the end for you!!\n"
             "HAHA just kidding, but it will be the end of your journey\n"
-            f"So {name}, What Is the ability of the Philosopher's Stone?\n"
+            f"So {name}, What Is the Ability of the Philosopher's Stone?\n"
             "Select 1 for the ability to make a person immortal \n"
             "Select 2 for the ability to wake people from the dead")) # Challenge description for the user
     user_input = input()
@@ -347,8 +350,10 @@ def game_lost():
     If user input No program will stop running.
     """
     show_dormitory_shield()
+    print()  # Adding space between dormitory shield and text
     option = ["Yes", "No"]
     print((f"You were not able to find the Philosopher's stone this time {name}\n"
+            f"We are sure that you did your best and {user_dormitory} should be proud of having you in their dormitory!\n"
             "Would you like to play again? Yes/No"))
     user_input = input().capitalize()
     while user_input not in option: # Displays message until user inupt is valid to option
@@ -360,7 +365,7 @@ def game_lost():
     else:
         if user_input == "No":
             clear_screen()
-            print(f"Thank you {name} for playing")
+            print(f"Thank you {name} for playing!")
             
 
 def game_win():
@@ -374,8 +379,11 @@ def game_win():
     If user input No program will stop running.
     """
     show_dormitory_shield()
+    print()  # Adding space between dormitory shield and text
     option = ["Yes", "No"]
-    print((f"⌁☍꒷₊˚ {name} ꒷₊˚⌁☍\n"
+    print((f"⌁☍꒷₊˚ {user_dormitory} WINS! ꒷₊˚⌁☍\n"
+            f"What a fantastic job you did {name}\n"
+            "We are so proud of you that you saved Hogwarts by finding the stone!\n"
             "Would you like to play again? Yes/No"))
     user_input = input().capitalize()
     while user_input not in option: # Displays message until user inupt is valid to option
@@ -387,11 +395,16 @@ def game_win():
     else:
         if user_input == "No":
             clear_screen()
-            print(f"Thank you {name} for playing")
+            print(f"Thank you {name} for playing!")
 
 
 
 def show_dormitory_shield():
+
+    """
+    Function to show dormitory shield if game is won or lost
+    Which shield that shows are based on the user input from dormitories list
+    """
     if user_dormitory_strength == "Bravery":
         print("""⬜⬛⬛⬛⬛⬛⬛⬜⬜⬛⬛⬛⬛⬛⬛⬜
 ⬛⬛🟥🟥🟥🟥⬛⬛⬛⬛🟨🟨🟨🟨⬛⬛
@@ -460,23 +473,26 @@ def show_dormitory_shield():
 ⬜⬜⬜⬜⬜⬜⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜""")
 
 
-"""
-Borrowed from https://www.101computing.net/python-typing-text-effect/
-Function to clear screen bwtween every challenge (function).
-"""
+
 def clear_screen():
+    """
+    Borrowed from https://www.101computing.net/python-typing-text-effect/
+    Function to clear screen bwtween every challenge (function).
+    """
     os.system("clear")
 
 
-"""
-Function to start the game
-"""
+
 def main():
+
+    """
+    Function to start the game
+    """
     welcome_to()
     select_dormitory()
     start_exploring()
 
 
 
-main ()
+main()
 
