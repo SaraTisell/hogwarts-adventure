@@ -1,7 +1,14 @@
 import os
+from colorama import Fore, Back, Style
 
 # Global list to use in functions
-dormitories = {"Bravery": "Gryffindor", "Curiosity": "Ravenclaw", "Loyalty": "Hufflepuff", "Ambition": "Slytherin"}
+dormitories = {"Bravery": Fore.RED + "Gryffindor" + Style.RESET_ALL,
+               "Curiosity": Fore.BLUE + "Ravenclaw" + Style.RESET_ALL,
+               "Loyalty": Fore.YELLOW +  "Hufflepuff" + Style.RESET_ALL,
+               "Ambition": Fore.GREEN + "Slytherin" + Style.RESET_ALL
+               }
+
+
 
 """
 Welcome text to user
@@ -12,7 +19,7 @@ def welcome_to():
     global name
     name = input().capitalize()
     print("Thank you, lets play and have fun!")
-    print()
+    clear_screen()
 
     """
     Start game
@@ -27,6 +34,7 @@ def welcome_to():
 
 # Select Dormitory
 def select_dormitory():
+    print()
     print("We need to know your strenghts to make sure to put you in the right dormitory.\n"
             "Please choose one of these four skills that best describes you greates strength!")
     for dormitory_strength in dormitories.keys():
@@ -37,15 +45,19 @@ def select_dormitory():
         user_dormitory_strength = input("Please write your selected strength:\n").capitalize()   
     
     user_dormitory = dormitories.get(user_dormitory_strength)
+
+    clear_screen()
     
     # Challenge description
-    print((f"{name} you have been placed in {user_dormitory} , which will suit you perfectly based on your skill {user_dormitory_strength}!\n"
-            "We have a very important mission for you, we need you to find the Philosopher's stone before it is to late!\n"
+    print((f"{name} you have been placed in {user_dormitory},\n"
+            f"which will suit you perfectly based on your skill {user_dormitory_strength}!\n"
+            "We have a very important mission for you, we need you to find\n"
+            "the Philosopher's stone before it is to late!\n"
             "Find the stone while you explore the magic within Hogwarts, but be careful, challenges will come in your way.\n"
             f"Use your skill {user_dormitory_strength} well, and we will meet again in the end.\n"
             f"The best of luck to you {name}"))
 
-    clear_screen()
+   
 
 """
 Function structure borrowed from https://www.makeuseof.com/python-text-adventure-game-create/
@@ -274,7 +286,7 @@ def game_win():
 
 """
 Borrowed from https://www.101computing.net/python-typing-text-effect/
-Function to clear screen when user have won or lost.
+Function to clear screen bwtween every challenge (function).
 """
 def clear_screen():
     os.system("clear")
