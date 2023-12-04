@@ -170,7 +170,7 @@ def dark_forest():
           "---YOU HAVE ENTERED THE DARK FOREST---" + Style.RESET_ALL)
     option = ["1", "2"]
     print(("There are many magical creatures living in this forest, "
-          "some of them are good..\n And some are you worst nightmare!\n"
+          "some of them are good..\nAnd some are you worst nightmare!\n"
            f"The Dark Forest is no safe place for students, "
            "especially not you {name}..\n"
            "The Dark Lord knows what you are up to, "
