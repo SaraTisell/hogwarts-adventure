@@ -171,8 +171,8 @@ def dark_forest():
     option = ["1", "2"]
     print(("There are many magical creatures living in this forest, "
           "some of them are good..\nAnd some are you worst nightmare!\n"
-           f"The Dark Forest is no safe place for students, "
-           "especially not you {name}..\n"
+           "The Dark Forest is no safe place for students, "
+           f"especially not you {name}..\n"
            "The Dark Lord knows what you are up to, "
            "he knows what you are trying to find\n"
            "He wants to stop you and have sent Dementors in your way\n"
