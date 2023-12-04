@@ -15,17 +15,10 @@ dormitories = {"Bravery": Fore.RED + "Gryffindor" + Style.RESET_ALL,
 Welcome text to user
 """
 def welcome_to():
-    print("Welcome to Hogwarts Adventure")
-    print("If you are ready to play the game please enter your name")
-    global name
-    name = input().capitalize()
-    print("Thank you, lets play and have fun!")
-    clear_screen()
 
     """
     Hogwarts logo borrowed from https://emojicombos.com/harry-potter-ascii-art
     """
-
     print("""⠀⠀⠀⠀⠀⢠⣾⣶⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠟⢂⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣦⣄⣀⡀⠀⠀⣀⣀⣠⠞⣉⡀⠀⠀⠂⢀⠀⠀⠀⠀
 ⠀⣠⣶⣿⣿⣿⣇⢶⢹⡿⠋⠻⣿⣿⣦⠞⠛⣽⣷⡿⠟⢿⣦⢀⣴⡿⠿⣶⠀⠀
@@ -43,7 +36,12 @@ def welcome_to():
 ⠀⠀⠀⠀⠀⠀⠀⠈⠛⠿⢴⣾⣋⠀⠀⣿⣿⣿⣻⣴⠿⠟⠁⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢷⣤⣿⡿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""")
-
+    print("Welcome to Hogwarts Adventure")
+    print("If you are ready to play the game please enter your name")
+    global name
+    name = input().capitalize()
+    print("Thank you, lets play and have fun!")
+    clear_screen()
 
 
     """
@@ -51,11 +49,12 @@ def welcome_to():
     Welcome letter
     """
     
-    print(f"Dear, {name}\nYou have been accepted to Hogwarts School for Witchcraft and Wizardry!")
+    print(f"Dear, {name}\nYou have been accepted"
+            "to Hogwarts School for Witchcraft and Wizardry!")
     time.sleep(1)
     print("It is time to place you in the right dormitory, our four dormitories are:")
     for dormitory in dormitories.values():
-        print(dormitory)
+        print("<---", dormitory, "--->")
     time.sleep(2)
 
 
@@ -67,23 +66,28 @@ def select_dormitory():
             "Please choose one of these four skills that best describes you greates strength!")
     for dormitory_strength in dormitories.keys():
         print(dormitory_strength)
+    global user_dormitory_strength
     user_dormitory_strength = input("Please write your selected strength:\n").capitalize()
     while user_dormitory_strength not in dormitories.keys():
         print("Strengths: Bravery, Curiosity, Loyalty, Ambition")
         user_dormitory_strength = input("Please write your selected strength:\n").capitalize()   
-    
+
     user_dormitory = dormitories.get(user_dormitory_strength)
 
     clear_screen()
-    
     # Challenge description
     print((f"{name} you have been placed in {user_dormitory},\n"
             f"which will suit you perfectly based on your skill {user_dormitory_strength}!\n"
             "We have a very important mission for you, we need you to find\n"
             "the Philosopher's stone before it is to late!\n"
-            "Find the stone while you explore the magic within Hogwarts, but be careful, challenges will come in your way.\n"
-            f"Use your skill {user_dormitory_strength} well, and we will meet again in the end.\n"
+            "Find the stone while you explore the magic within Hogwarts,\n" 
+            "but be careful, challenges will come in your way.\n"
+            f"Use your skill {user_dormitory_strength} well,\n"
+            "We will meet again in the end.\n"
             f"The best of luck to you {name}"))
+    print()
+    time.sleep(2)
+    
 
    
 
@@ -93,7 +97,8 @@ First choise for user to determine path
 """
 def start_exploring():
     option = ["1", "2"]
-    print(("It is time to begin your jorney to find the Philosopher's stone, you can either go to the Third Floor or the Dark Forest\n"
+    print(("It is time to begin your jorney to find the Philosopher's stone,\n"
+            "you can either go to the Third Floor or the Dark Forest\n"
             "Select 1 for Third Floor\n"
             "Selecet 2 for Dark Forest ")) # Challenge description for the user
     user_input = input()
@@ -111,7 +116,7 @@ def start_exploring():
         
 
 def third_floor():
-    print("---YOU HAVE ENTERED THE THIRD FLOOR---") # Text to show user where they are
+    print(Fore.MAGENTA + "---YOU HAVE ENTERED THE THIRD FLOOR---" + Style.RESET_ALL) # Text to show user where they are
     option = ["1", "2"]
     print(("The Third Floor is a higly forbidden area as very dangerous creatures roam here.. And yet here you are..\n"
             "You are not allowed to stay here and Mr Filch is on his way to catch you and drag you to the principal's office\n"
@@ -135,7 +140,7 @@ def third_floor():
 
 
 def dark_forest():
-    print("---YOU HAVE ENTERED THE DARK FOREST---") # Text to show user where they are
+    print(Fore.MAGENTA +"---YOU HAVE ENTERED THE DARK FOREST---" + Style.RESET_ALL) # Text to show user where they are
     option = ["1", "2"]
     print(("There are many magical creatures living in this forest, some of them are good and some are you worst nightmare!\n"
             f"The Dark Forest is no safe place for students, especially not you {name}..\n"
@@ -162,7 +167,8 @@ def dark_forest():
 
 def fluffy_dog():
     option = ["1", "2"]
-    print(("You were able to escape Mr Filch, but we told you dangerous creatures roam here at the third floor\n"
+    print(("You were able to escape Mr Filch,\n"
+            "but we told you dangerous creatures roam here at the third floor\n"
             "And you hide inside the same room as Fluffy, Hagrid's three-headed dog!\n"
             "Fluffy does not like other people than his loving Hagrid, but can easily be calmed down.\n"
             "He is on hiw way to attack you! You have to distract him\n"
@@ -296,8 +302,9 @@ def game_lost():
             
 
 def game_win():
+    show_dormitory_shield()
     option = ["Yes", "No"]
-    print((f"You win {name}\n"
+    print((f"⌁☍꒷₊˚ {name} ꒷₊˚⌁☍\n"
             "Would you like to play again? Yes/No"))
     user_input = input().capitalize()
     while user_input not in option: # Displays message until user inupt is valid to option
@@ -310,6 +317,88 @@ def game_win():
         if user_input == "No":
             clear_screen()
             print(f"Thank you {name} for playing")
+
+
+
+def show_dormitory_shield():
+    if user_dormitory_strength == "Bravery":
+        print("""⠀⠀⠀⠀⠀⠀⣤⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⡆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⡍⠉⢸⡆⢀⣠⢟⣿⣿⣿⡿⣿⡿⣿⣧⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣿⣿⣿⠂⢻⣿⣿⣿⠛⠛⣙⠻⠷⣿⣿⢿⣿⣄⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣶⣶⣿⣿⠿⠏⢀⣾⣿⣿⡐⠂⠀⢀⣀⣈⣿⣿⣿⡻⠿⣿⣿⣆⠀⠀⠀
+⠀⠀⣿⣿⡟⣿⠁⢀⣦⢐⣽⣿⣿⣿⣇⠀⠘⠛⢻⣇⣿⡏⠀⢠⣿⣿⣿⠀⠀⠀
+⠀⠀⢹⣿⡷⣿⡇⠸⣿⠻⣟⣿⣿⠟⢻⣷⣶⣶⣾⣿⣿⠃⢀⣾⣿⣿⣿⠀⠀⠀
+⠀⠀⢸⡿⠃⠉⠢⠀⢉⠀⠈⣹⠏⠀⠀⠈⠉⠛⠛⠿⠁⠀⣾⠿⣿⣿⣿⠀⠀⠀
+⠀⠀⠘⣇⢰⣸⣆⢂⢻⡆⣼⣿⡀⠀⠀⠀⠀⠀⠤⠜⣀⣰⣿⣶⡟⣿⣿⠀⠀⠀
+⢠⣶⣶⣿⣿⠛⠇⠘⠈⠁⠘⠟⠁⠐⣢⠠⠀⠀⠀⢀⣀⣀⣀⠀⠀⢹⣿⣿⣷⠀
+⠘⠿⢿⣿⣿⡷⠞⣿⢠⣿⠟⣿⠇⠀⠀⠀⠀⠀⢀⠈⠙⡿⠁⢳⣶⣾⣿⠛⠋⠀
+⠀⠀⢀⣹⡿⠇⠓⢻⣸⣿⣿⣃⣀⣤⣤⣤⣤⣴⣿⣄⣼⣿⣀⣾⣿⣿⡇⠀⠀⠀
+⠤⣴⡇⢠⡔⢦⡄⠸⠉⠋⠉⠉⠉⣩⠭⢩⢭⡉⠉⠉⠉⠩⡭⠉⠛⠛⠟⠿⣷⠆
+⠀⢹⠀⣿⠀⠈⠀⠀⢴⠶⢲⣰⠂⣿⠁⣿⢱⡇⣶⢲⢠⡶⡇⣴⣤⢠⣤⠀⣿⠀
+⠀⢿⡀⣿⠐⢶⡆⠀⠼⣀⡨⠃⢀⣿⢀⡿⠘⠃⠇⠾⠸⠾⢇⢿⡽⣸⡀⠀⣿⠀
+⠀⣿⡇⢹⣧⣸⠧⢠⣤⣬⣤⣤⣤⣤⣤⣤⣶⣤⣤⣤⣤⣤⣤⣤⣄⡀⠀⠀⣧⠀
+⠀⡿⣇⠀⠉⠤⠤⢼⣿⣿⡀⠀⠻⠷⡟⣰⣦⡀⠈⠒⢶⣿⡿⠉⠉⠛⠻⠿⠿⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣶⣤⡴⡆⠘⢟⣵⣶⣾⣾⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠙⢿⣿⣷⣾⣿⠟⠁⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""")
+    elif user_dormitory_strength == "Curiosity":
+        print("""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⡀⠀⠈⡆⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣆⢹⡄⣼⣿⣸⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣼⣧⡇⣿⢣⣿⣺⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣿⣿⡟⣹⢧⡿⣵⣿⡆⣀⡀⠀⣀⣀⡀⠀⠀⠀
+⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⢏⣿⡟⣡⣿⣎⡼⣫⣟⣼⣿⣿⣿⣿⣿⡇⠀⠀⠀
+⠀⢀⠤⠒⠒⡺⠿⠿⡽⢹⣥⢸⣿⢹⢿⣿⣿⢟⣽⣿⡑⠆⡢⢼⣿⣿⡀⠀⠀⠀
+⢀⢼⠶⣿⡏⢻⣷⡄⠀⠚⠛⠚⠻⠇⠛⠛⠑⠛⠋⠈⢁⡌⠉⠉⠁⢀⣀⠈⢢⠀
+⣇⢿⡇⣿⡇⢀⣿⡇⡇⣀⣀⢀⠀⡀⡠⡀⣀⣄⢀⢤⢸⣇⡤⣄⣠⢈⢻⢀⠧⡀
+⠈⢹⠀⣿⡗⢾⣍⠀⡇⣥⣿⢸⡇⢿⡇⡁⠈⢹⣿⠀⢸⡧⣆⣿⣿⡼⡼⡸⠀⡜
+⠀⢸⠀⢿⡇⣸⣿⡇⣇⣉⡉⠀⠁⠀⠁⣁⣉⣈⣀⣁⣨⣥⣭⣥⣬⣤⢄⡇⠸⠀
+⠀⠸⠤⢼⡧⣤⣤⡥⣇⣶⡎⠿⢩⣏⠁⡀⣨⡆⣿⣿⣷⣽⣿⣿⣿⣿⠤⣃⡆⠀
+⠀⠀⠀⢸⠇⣿⣿⡇⡿⡻⣬⣭⣯⡍⢰⣧⣿⣶⣿⣿⡿⣲⣿⣿⣿⣿⢩⡴⠃⠀
+⠀⠀⠀⠸⠀⣿⣿⣿⢿⣤⣺⡝⢿⣧⣼⣿⣿⣿⣿⡿⣻⣿⡿⣿⣿⣿⠘⠀⠀⠀
+⠀⠀⠀⠀⠀⢻⣿⣿⣸⡿⡋⣾⢸⢹⣿⣿⣿⣿⣷⣝⡪⢉⡷⣿⣿⡟⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢸⣿⣿⡟⢾⡇⣿⢸⢿⣻⢹⣿⣟⠛⢿⣯⢳⢫⡔⣻⣥⠄⠀⠀⠀
+⠀⠀⠀⠀⠀⠈⢿⣿⣿⡸⠳⠿⠬⢾⣟⣾⢟⡅⣿⢸⠐⣭⣟⣛⡅⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⢻⣿⣷⣔⣕⣤⡦⣎⢽⢸⡇⣿⢘⣾⣿⣿⠏⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣍⡆⡆⢾⢸⢇⣵⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣶⣾⣶⣿⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⣿⠿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""")
+    elif user_dormitory_strength == "Loyalty":
+        print("""⬜⬛⬛⬛⬛⬛⬛⬜⬜⬛⬛⬛⬛⬛⬛⬜
+⬛⬛🟨🟨🟨🟨⬛⬛⬛⬛🏽🏽🏽🏽⬛⬛
+⬛🟨🟨🟨🟨🟨🟨⬛⬛🏽🏽🏽🏽🏽🏽⬛
+⬛🟨⬛🟨🟨🟨🟨🟨🏽🏽🏽🏽🏽⬛🏽⬛
+⬛⬛🟨🟨🟨⬛⬛🟨🏽⬛⬛🏽🏽🏽⬛⬛
+⬜⬛⬛🟨🟨🟨⬛🟨🏽⬛🏽🏽🏽⬛⬛⬜
+⬜⬛⬛🟨🟨🟨⬛⬛⬛⬛🏽🏽🏽⬛⬛⬜
+⬛⬛🏽🏽🏽🏽⬛🏽🟨⬛🟨🟨🟨🟨⬛⬛
+⬛🏽🏽🏽🏽🏽⬛🏽🟨⬛🟨🟨🟨🟨🟨⬛
+⬛🏽🏽🏽🏽⬛⬛🏽🟨⬛⬛🟨🟨🟨🟨⬛
+⬛⬛🏽🏽🏽🏽🏽🏽🟨🟨🟨🟨🟨🟨⬛⬛
+⬜⬛⬛⬛🏽🏽🏽🏽🟨🟨🟨🟨⬛⬛⬛⬜
+⬜⬜⬜⬛⬛🏽🏽🏽🟨🟨🟨⬛⬛⬜⬜⬜
+⬜⬜⬜⬜⬛⬛⬛🏽🟨⬛⬛⬛⬜⬜⬜⬜
+⬜⬜⬜⬜⬜⬜⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜""")
+
+    else:
+        if user_dormitory_strength == "Ambition":
+            print("""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⣶⣾⣶⣿⣿⣷⣷⣶⡦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢰⣦⣤⣤⣤⣤⣴⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣦⣤⣤⣤⣤⣤⡄⠀⠀
+⠀⠀⠀⣻⠿⣛⠋⠑⠻⠟⠛⠛⠛⠋⠉⣉⠙⠛⠛⠛⠛⠻⠿⠿⣿⣿⣿⠁⠀⠀
+⠀⠀⢸⢰⡋⠹⠋⠀⠀⣾⠀⡀⠀⣰⠆⢹⣀⡀⢀⣄⡀⣀⣀⠀⡄⠈⠙⠀⢀⠀
+⠂⡀⢸⠈⠻⣶⣄⠀⡄⣿⠸⣇⡏⢻⡀⣾⠉⡇⢾⠔⡃⣿⠉⢰⡖⢰⣦⣄⠀⠔
+⠀⠀⣼⠖⢲⡌⢿⡇⡇⢋⣤⠝⢀⠨⠀⠁⠨⢉⠈⠉⠀⠛⠀⠻⠁⣿⢠⡇⠌⠀
+⠀⠰⣇⠐⠚⠃⣼⠇⡧⢤⣾⡝⠁⣠⢴⣶⡦⣄⠈⣚⡖⠶⣦⣄⡀⠀⠉⢁⠀⠀
+⠀⠀⠙⠛⠒⣫⢁⣴⣤⣿⢿⡀⠰⣃⢸⡇⣸⣞⠇⢶⠀⣠⣼⣿⣿⣷⡆⠜⠀⠀
+⠀⠀⠀⠀⣿⣿⠀⡻⡟⠿⣿⣧⠀⠑⠕⡾⣿⣿⣅⣶⣤⣹⣟⡁⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⠈⢿⡲⡐⡿⣿⣿⣶⣤⡀⠀⠋⢿⣿⢟⠉⣿⠃⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⡴⣷⠀⠓⡌⡌⣿⣿⣏⣹⡷⣦⣄⠘⢿⠒⣿⠇⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⡧⣮⠦⢨⣠⢣⠻⣿⣿⣿⣿⣿⠻⣆⠀⢣⣿⡆⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣇⣴⣿⣿⣿⢸⣾⣿⣿⣿⢿⣿⣶⣿⢀⢸⣿⡄⣿⣿⠃⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⡟⣿⣿⣤⣿⡄⠫⡁⢈⣏⠀⣙⡷⠋⣼⣇⣿⣿⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣧⣝⡻⢿⢟⣻⢦⣬⣍⣉⣉⣡⠴⡾⡿⢟⣯⣷⣿⣿⡇⠀⠀⠀
+⠀⠀⠀⠀⠉⠛⠿⢿⣿⣷⣮⣉⡙⢶⠚⣿⠒⡶⣩⣽⣾⣿⡿⠿⠛⠋⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠿⣿⣿⣷⣮⣭⣶⣿⣿⡿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""")
 
 
 """
@@ -327,6 +416,7 @@ def main():
     welcome_to()
     select_dormitory()
     start_exploring()
+    show_dormitory_shield()
 
 
 main ()
