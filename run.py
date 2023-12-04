@@ -137,9 +137,9 @@ def third_floor():
           "---YOU HAVE ENTERED THE THIRD FLOOR---" + Style.RESET_ALL)
     option = ["1", "2"]
     print(("The Third Floor is a higly forbidden area as very dangerous "
-          "creatures roam here..\n"
+          "creatures roam here\n"
            "And yet here you are..\n"
-           "You are not allowed to stay here and Mr Filch is on his way "
+           "You are not allowed to stay here..\nMr Filch is on his way "
            "to catch you and drag you to the principal's office\n"
            "Take action now! You can either Hide or Run\n"
            "Select 1 to Run\n"
