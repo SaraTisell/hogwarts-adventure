@@ -1,4 +1,5 @@
 import os
+import time
 from colorama import Fore, Back, Style
 
 # Global list to use in functions
