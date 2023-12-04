@@ -56,7 +56,7 @@ def welcome_to():
     print("It is time to place you in the right dormitory, our four dormitories are:")
     for dormitory in dormitories.values():
         print("<---", dormitory, "--->")
-    time.sleep(2)
+    time.sleep(1)
 
 
 
@@ -64,14 +64,14 @@ def welcome_to():
 def select_dormitory():
 
     """
-    Function to assagin the user in to the right dormitory based on user input from key values in dormitory list
+    Function to assagin the user into the right dormitory based on user input from key values in dormitory list
     """
     print()
     print("We need to know your strenghts to make sure to put you in the right dormitory.\n"
             "Please choose one of these four skills that best describes you greates strength!")
     for dormitory_strength in dormitories.keys():
         print(dormitory_strength)
-    global user_dormitory_strength
+    global user_dormitory_strength  # Make this global to use in show_dormitory_shield
     user_dormitory_strength = input("Please write your selected strength:\n").capitalize()
     while user_dormitory_strength not in dormitories.keys():
         print("Strengths: Bravery, Curiosity, Loyalty, Ambition")
@@ -91,7 +91,7 @@ def select_dormitory():
             "We will meet again in the end.\n"
             f"The best of luck to you {name}"))
     print()
-    time.sleep(2)
+    time.sleep(1)
     
 
    
@@ -241,6 +241,8 @@ def hagrids_hut():
 
 def hospital_wing():
     option = ["1", "2"]
+    print()  # Adding space between text when user comes from Hagrid's hut & Fluffy Dog
+    time.sleep(1)
     print((f"Poor {name}, finally you woke up!\n"
             "You had some serious injuries, but no worries I was able to cure them.\n"
             "Your friends left you a lot of sweets to make you feel better.\n"
@@ -430,7 +432,7 @@ def main():
     welcome_to()
     select_dormitory()
     start_exploring()
-    show_dormitory_shield()
+
 
 
 main ()
