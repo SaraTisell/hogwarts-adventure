@@ -218,6 +218,12 @@ def fluffy_dog():
 
 
 def hagrids_hut():
+
+    """
+    Function for challenge Hagrid's Hut
+    Containing challenge description
+    User input will determine game path
+    """
     print(Fore.MAGENTA +"---YOU HAVE ENTERED HAGRID'S HUT---" + Style.RESET_ALL) # Text to show user where they are
     option = ["1", "2"]
     print((f"Oh dear, you must be {name}, nice to finally meet you, I am Hagrid - the groundskeeper here at Hogwarts\n"
@@ -240,6 +246,12 @@ def hagrids_hut():
             prof_dumbledore()
 
 def hospital_wing():
+
+    """
+    Function for challenge Hospital Wing
+    Containing challenge description
+    User input will determine game path
+    """
     option = ["1", "2"]
     print()  # Adding space between text when user comes from Hagrid's hut & Fluffy Dog
     time.sleep(1)
@@ -255,17 +267,22 @@ def hospital_wing():
         user_input = input()
     if user_input == "1": # Takes the user to meet Peeves the poltergeist
         clear_screen()
-        print("---YOU HAVE ENTERED THE CORRIDOR---") # Text to show user where they are
+        print(Fore.MAGENTA +"---YOU HAVE ENTERED THE CORRIDOR---" + Style.RESET_ALL) # Text to show user where they are
         print("Eeeew I bet you got a bugger flavor on that bean!") # Comment from Peeves
         peeves_poltergeist()
     else:
         if user_input == "2": # Takes the user to meet Proffessor Dumbledore
             clear_screen()
-            print("---YOU HAVE ENTERED THE CORRIDOR---") # Text to show user where they are
+            print(Fore.MAGENTA +"---YOU HAVE ENTERED THE CORRIDOR---" + Style.RESET_ALL) # Text to show user where they are
             print("Oh a Lemon Drop, that is my favourite") #Comment from Proffessor Dumbledore
             prof_dumbledore()
 
 def peeves_poltergeist():
+    """
+    Function for challenge Peeves Poltergeist
+    Containing challenge description
+    User input will lead to win or loss
+    """
     option = ["1", "2"]
     print((f"HAHAHA, you silly goose, I am Peeves the poltergeist that makes Hogwarts so fun!\n"    
             "I bet you walking these corridors to find a particular stone?\n"
@@ -290,6 +307,12 @@ def peeves_poltergeist():
             game_lost()
 
 def prof_dumbledore():
+
+    """
+    Function for challenge Prof Dumbledore
+    Containing challenge description
+    User input will lead to win or loss
+    """
     option = ["1", "2"]
     print((f"It is an honor to meet you {name}, I am professor Albus Dumbledore\n"    
             "You have done a fantastic job during you journey here at Hogwarts\n"
@@ -313,6 +336,16 @@ def prof_dumbledore():
             game_win()
 
 def game_lost():
+
+    """
+    Function for game lost
+    Containing dormitory shield based on user input from dormitories list
+    and text that user lost the game
+    User will be asked to play again with input Yes/No
+    If user input Yes, game will start over
+    If user input No program will stop running.
+    """
+    show_dormitory_shield()
     option = ["Yes", "No"]
     print((f"You were not able to find the Philosopher's stone this time {name}\n"
             "Would you like to play again? Yes/No"))
@@ -330,6 +363,15 @@ def game_lost():
             
 
 def game_win():
+
+    """
+    Function for Game Win
+    Containing dormitory shield based on user input from dormitories list
+    and text that user won the game
+    User will be asked to play again with input Yes/No
+    If user input Yes, game will start over
+    If user input No program will stop running.
+    """
     show_dormitory_shield()
     option = ["Yes", "No"]
     print((f"⌁☍꒷₊˚ {name} ꒷₊˚⌁☍\n"
