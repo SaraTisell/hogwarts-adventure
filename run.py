@@ -211,7 +211,7 @@ def fluffy_dog():
           "but we told you dangerous creatures roam here at the third floor\n"
            "And you hide inside the same room as Fluffy, "
            "Hagrid's three-headed dog!\n"
-           "Fluffy does not like other people than his loving Hagrid, "
+           "Fluffy does not like other people than his loving Hagrid,\n"
            "but can easily be calmed down.\n"
            "He is on hiw way to attack you! You have to distract him\n"
            "Select 1 to Play Music\n"
