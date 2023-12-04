@@ -27,9 +27,11 @@ def welcome_to():
     Welcome letter
     """
     print(f"Dear, {name}\nYou have been accepted to Hogwarts School for Witchcraft and Wizardry!")
+    time.sleep(1)
     print("It is time to place you in the right dormitory, our four dormitories are:")
     for dormitory in dormitories.values():
         print(dormitory)
+    time.sleep(2)
 
 
 
