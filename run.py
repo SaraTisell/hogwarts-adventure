@@ -194,7 +194,7 @@ def dark_forest():
             print(Fore.MAGENTA +
                   "---YOU HAVE ENTERED THE HOSPITAL WING---" + Style.RESET_ALL)
             print("The dementors is to strong to be beaten by the expelliarmus"
-                  " spell,\n you are alive but hurt.\n"
+                  " spell,\nyou are alive but hurt.\n"
                   "Madame Pomfrey will meet you at the hospital wing.")
             hospital_wing()
 
