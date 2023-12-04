@@ -205,7 +205,8 @@ def fluffy_dog():
         user_input = input()
     if user_input == "1": # Takes the user to meet Peeves the poltergeist
         clear_screen()
-        print(Fore.MAGENTA +"---YOU HAVE ENTERED THE CORRIDOR---" + Style.RESET_ALL)
+        print(Fore.MAGENTA +"---YOU HAVE ENTERED THE CORRIDOR---" + Style.RESET_ALL)  # Text to show user where they are
+        print("I am chocked that horrible music could distract Fluffy, I was sure you were going to be dog food! ")
         peeves_poltergeist()
     else:
         if user_input == "2": # Takes the user to Hospital wing
