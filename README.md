@@ -61,6 +61,42 @@ Each challenge will have a short story and a description of what the user have t
   * Against each other
 
 
+#### Game in action
+
+Here is a comparison of the game for two different users with different inputs.
+
+##### User Jane
+
+![Jane start](documents/readme_img/hogwarts-adv-start.png)
+
+![Jane dormitory](documents/readme_img/hogwarts-adv-dormitory.png)
+
+![Jane description](documents/readme_img/hogwarts-adv-descript.png)
+
+![Jane third floor](documents/readme_img/hogwarts-adv-third-floor.png)
+
+![Jane fluffy](documents/readme_img/hogwarts-adv-fluffy.png)
+
+![Jane Peeves](documents/readme_img/hogwarts-adv-peeves.png)
+
+![Jane win](documents/readme_img/hogwarts-adv-win.png)
+
+##### User John
+
+![John start](documents/readme_img/john-hogwarts-adv-start.png)
+
+![John dormitory](documents/readme_img/john-hogwarts-adv-dormitory.png)
+
+![John description](documents/readme_img/john-hogwarts-adv-descript.png)
+
+![John dark forest](documents/readme_img/john-hogwarts-adv-dark-forest.png)
+
+![John hospital wing](documents/readme_img/john-hogwarts-adv-hospital-wing.png)
+
+![John prof dumbledore](documents/readme_img/john-hogwarts-adv-prof-dumbledore.png)
+
+![John lost](documents/readme_img/john-hogwarts-adv-lost.png)
+
 
 
 
