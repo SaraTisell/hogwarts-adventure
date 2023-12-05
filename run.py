@@ -41,6 +41,7 @@ def welcome_to():
     global name
     name = input().capitalize()
     print("Thank you, lets play and have fun!")
+    time.sleep(1)
     clear_screen()
 
     """
