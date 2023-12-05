@@ -15,6 +15,18 @@ Based on the user's input they will be assigned a dormitory and the user will be
 Each challenge will have a short story and a description of what the user have to do.
 
 
+### Site Goals
+* To provide a fun and interesting game that suits a wide range of ages
+
+### Taget Audience
+* Users that enjoy adventure games
+* Harry Potter fans
+
+
+### User Stories
+* As I user would I like the game to be easy to understand with clear description provided
+* I like that the challenges are based on "true stories" from the actual Harry Potter books
+* After the game is won or lost I got the opportunity to decide if I want to play again or no.
 
 
 
