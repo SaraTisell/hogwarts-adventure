@@ -22,11 +22,16 @@ Each challenge will have a short story and a description of what the user have t
 * Users that enjoy adventure games
 * Harry Potter fans
 
-
 ### User Stories
 * As I user would I like the game to be easy to understand with clear description provided
 * I like that the challenges are based on "true stories" from the actual Harry Potter books
 * After the game is won or lost I got the opportunity to decide if I want to play again or no.
+
+## Structure
+
+### Flowchart
+
+[Flowchart](documents/readme_img/flowchart-hogwarts-adventure.png)
 
 
 
