@@ -134,7 +134,7 @@ Here is a comparison of the game for two different users with different inputs.
 ![John lost](documents/readme_img/john-hogwarts-adv-lost.png)
 
 - John lost the game by answering wrong to Dumbledores question in the previous challenge
-- As John was assign to Slytherin, that dormitorys shield will be displayed with congratulations text
+- As John was assign to Slytherin, that dormitorys shield will be displayed with a "good job, but you lost" text
 - John will be offered the opportunity to play again
 
 ##### Additional information
