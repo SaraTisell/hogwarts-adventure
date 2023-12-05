@@ -160,6 +160,24 @@ Here is a comparison of the game for two different users with different inputs.
 
 
 ## Testing
+### Manual testing
+
+
+### Bugs
+#### Solved bugs
+* My first run thorugh PEP8 linter gave error on to long lines
+  * These were easily solwed by dividing each line into two lines without breaking the code.
+    * Syntax example: print("these is a very long line of text that will not"
+                            " be validated if it is not divided")
+
+#### Remaining bugs
+* No known bugs are remaining
+
+### Validator Testing
+* PEP8
+  * No error were returned from [PEP8ci.herokuapp.com](https://pep8ci.herokuapp.com/)
+
+  ![pep8](documents/readme_img/ha-python-linter.png)
 
 ## Deployment
 Hogwarts Adventure was deployed using Code Institute's mock terminal for Heroku
@@ -200,3 +218,6 @@ Steps to deploy
 
 
 
+
+
+[def]: https://pep8ci.herokuapp.com/
