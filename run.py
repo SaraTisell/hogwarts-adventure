@@ -255,8 +255,8 @@ def hagrids_hut():
     # Challenge description for the user
     print((f"Oh, you must be {name}, nice to finally meet you, I am Hagrid\n"
           "The groundskeeper here at Hogwarts\n"
-           "I saw what happened in the Dark Forest, that patronus really"
-           " scared the dementors away!\n"
+           "I saw what happened in the Dark Forest,\n"
+           "that patronus really scared the dementors away!\n"
            f"You are not far from finding the Philosopher's stone now {name}\n"
            "I can not tell you how to find it, but if you are able to answer "
            "my question,\nthis adventure will soon be over..\n"
