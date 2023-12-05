@@ -146,7 +146,18 @@ Here is a comparison of the game for two different users with different inputs.
 ## Technologies
 * Python - The main language to build the game application
   * Python packages
-    * Colorama - To implement color 
+    * Colorama - To implement color
+* Gitpod
+  * IDE used to develope code
+* Git
+  * Used to push and commit code
+* Github
+  * To source code
+* Heroku
+  * To deploy
+* Canva 
+  * To build flowchart
+
 
 ## Testing
 
