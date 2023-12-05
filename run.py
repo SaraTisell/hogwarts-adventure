@@ -409,7 +409,7 @@ def game_lost():
     print()  # Adding space between dormitory shield and text
     option = ["Yes", "No"]
     print((f"You were not able to find the Philosopher's stone this "
-          "time {name}\n"
+          f"time {name}\n"
            "We are sure that you did your best!\n"
            f"And {user_dormitory} should be proud of having "
            "you in their dormitory!\n"
