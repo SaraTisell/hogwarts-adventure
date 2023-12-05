@@ -137,10 +137,37 @@ Here is a comparison of the game for two different users with different inputs.
 - As John was assign to Slytherin, that dormitorys shield will be displayed with a "good job, but you lost" text
 - John will be offered the opportunity to play again
 
-##### Additional information
+##### Additional Information
 * The user will have the opportunity to be assign to one of four dormitories
 * Each dormitory has their own strength, color and shield that will be displayed in different steps thorugh the game
 * There is five different paths that will lead to a win for the user
+
+
+## Technologies
+* Python - The main language to build the game application
+  * Python packages
+    * Colorama - To implement color 
+
+## Testing
+
+## Deployment
+
+## Credits
+
+* Code Institute for the deployment Terminal
+* My mentor for guidence and advice
+* My partner and family who tried the game as it was under development
+* The writer JK Rowling that inspired me with her Harry Potter story
+
+### Code
+* https://emojicombos.com/harry-potter-ascii-art
+  * The ascii art was borrowed from this site
+
+* https://www.makeuseof.com/python-text-adventure-game-create/
+  * The function structure was borrowed from this site
+
+* https://www.101computing.net/python-typing-text-effect/
+  * Insperation for time sleep and to clear screen after each challenge was borrowed from this site
 
 
 
