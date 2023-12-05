@@ -162,6 +162,23 @@ Here is a comparison of the game for two different users with different inputs.
 ## Testing
 
 ## Deployment
+Hogwarts Adventure was deployed using Code Institute's mock terminal for Heroku
+
+Steps to deploy
+* Go to Heroku and click "New"
+* Select "Create new app"
+* Selcet app name and choose a region
+* Navigate to setting to add Config var
+  * KEY: PORT VALUE: 8000
+* Add buildpacks Python and NodeJS (Set them in this order)
+* Navigate to deploy
+  * Choose GitHub as Deployment Method
+  * Connect GitHub and search for repository name 
+  * Click connect to link up Heroku to the GitHub repository code.
+* Enable Automatic Deploys
+* Choose main as branch to deploy
+* Click deploy branch
+* A live link to view the app will be displayed
 
 ## Credits
 
