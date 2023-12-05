@@ -162,6 +162,8 @@ Here is a comparison of the game for two different users with different inputs.
 ## Testing
 ### Manual testing
 
+Hogwarts Adventure has been tested in local terminal and Heroku terminal.
+
 ![Testing](documents/readme_img/testing%20.png)
 ![Testing continue](documents/readme_img/testing%201.png)
 
