@@ -274,7 +274,7 @@ def hagrids_hut():
     else:
         if user_input == "2":  # Takes the user to meet Proffessor Dumbledore
             clear_screen()
-            print(f"To bad {name}, that was not the one... but come with me!"
+            print(f"To bad {name}, that was not the one... but come with me!\n"
                   "I want you to meet someone special.")
             print()
             prof_dumbledore()
